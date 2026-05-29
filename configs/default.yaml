@@ -1,0 +1,45 @@
+# FRAME-LINK Default Configuration
+# Version: 1.0.0
+
+project:
+  name: "FRAME-LINK"
+  version: "1.0.0"
+  environment: "production"
+
+connection:
+  type: "welded_T_joint"
+  material: "steel_S355"
+  fatigue_class: "FAT71"
+
+sensors:
+  sampling_rate: 1000
+  strain_gauge_type: "IIW_rosette"
+  ae_sampling_mhz: 5
+
+modules:
+  scfmm:
+    C: 3e-13
+    m: 3.0
+    Y: 1.12
+    mesh_convergence: 0.02
+  
+  fdarm:
+    d_allowable: 0.80
+    beta_target: 3.8
+    sn_class: "FAT71"
+    goodman_enabled: true
+  
+  csdm:
+    stiffness_warn: 0.10
+    stiffness_critical: 0.25
+    ai_accelerated: true
+
+thresholds:
+  csii_steady: 0.90
+  csii_monitoring: 0.75
+  csii_mitigation: 0.65
+  a_score_threshold: 3.0
+
+logging:
+  level: "INFO"
+  output: "logs/frame_link.log"

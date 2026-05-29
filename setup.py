@@ -1,0 +1,45 @@
+from setuptools import setup, find_packages
+
+setup(
+    name="frame-link-engine",
+    version="1.0.1",
+    author="Samir Baladi",
+    author_email="gitdeeper@gmail.com",
+    description="FRAME-LINK: Fatigue Reliability Assessment and Monitoring Extension for Structural Connection Integrity",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    license="MIT",
+    packages=find_packages(where="."),
+    package_dir={"": "."},
+    classifiers=[
+        "Development Status :: 4 - Beta",
+        "Intended Audience :: Science/Research",
+        "Intended Audience :: Engineering",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Scientific/Engineering",
+    ],
+    python_requires=">=3.9",
+    install_requires=[
+        "numpy>=1.21.0",
+        "scipy>=1.7.0",
+        "pandas>=1.3.0",
+        "matplotlib>=3.4.0",
+        "scikit-learn>=1.0.1",
+        "xgboost>=1.5.0",
+        "streamlit>=1.12.0",
+        "plotly>=5.5.0",
+        "pyyaml>=5.4.0",
+        "pydantic>=1.9.0",
+    ],
+    entry_points={
+        "console_scripts": [
+            "frame-link=frame_link.cli:main",
+            "frame-link-dashboard=frame_link.monitoring.app:run",
+        ],
+    },
+    include_package_data=True,
+    zip_safe=False,
+)

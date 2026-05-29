@@ -1,0 +1,31 @@
+# Welded T-Joint Configuration
+
+connection:
+  type: "welded_T_joint"
+  geometry:
+    plate_thickness: 20e-3
+    weld_size: 8e-3
+    length: 500e-3
+
+materials:
+  base_metal: "steel_S355"
+  weld_metal: "steel_S355"
+  E: 200e9
+  nu: 0.3
+
+fracture:
+  C: 3e-13
+  m: 3.0
+  K_Ic: 80.0
+  Y: 1.12
+
+fatigue:
+  sn_class: "FAT71"
+  m: 3
+  d_allowable: 0.80
+  beta_target: 3.8
+
+sensor_layout:
+  strain_gauges: 6
+  ae_sensors: 2
+  lvdt: 1

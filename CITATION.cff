@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use FRAME-LINK in your research, please cite it using these metadata."
+title: "FRAME-LINK: Fatigue Reliability Assessment and Monitoring Extension for Structural Connection Integrity under Cyclic and Dynamic Loading"
+version: 1.0.1
+doi: 10.5281/zenodo.20440786
+date-released: 2026-05-29
+authors:
+  - family-names: Baladi
+    given-names: Samir
+    email: gitdeeper@gmail.com
+    orcid: https://orcid.org/0009-0003-8903-0029
+    affiliation: Ronin Institute / Rite of Renaissance
+repository-code: https://github.com/gitdeeper12/FRAME-LINK
+url: https://frame-link.netlify.app
+abstract: "FRAME-LINK is a structural engineering framework for fatigue reliability assessment and monitoring of structural connection systems under cyclic and dynamic loading, incorporating Paris-Erdogan fracture mechanics, Palmgren-Miner damage accumulation, and AI-assisted computational support."
+license: MIT
+keywords:
+  - fracture-mechanics
+  - fatigue-analysis
+  - paris-erdogan
+  - structural-connections
+  - welded-joints
+  - crack-propagation
+  - palmgren-miner
+  - rainflow-counting
+type: software
